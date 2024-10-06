@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @product_accepted %>
+
+<div>
+  <%= link_to "Edit this product accepted", edit_product_accepted_path(@product_accepted) %> |
+  <%= link_to "Back to product accepteds", product_accepteds_path %>
+
+  <%= button_to "Destroy this product accepted", @product_accepted, method: :delete %>
+</div>

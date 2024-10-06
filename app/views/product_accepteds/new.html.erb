@@ -1,0 +1,11 @@
+<% content_for :title, "New product accepted" %>
+
+<h1>New product accepted</h1>
+
+<%= render "form", product_accepted: @product_accepted %>
+
+<br>
+
+<div>
+  <%= link_to "Back to product accepteds", product_accepteds_path %>
+</div>

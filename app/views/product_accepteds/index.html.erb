@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Product accepteds" %>
+
+<h1>Product accepteds</h1>
+
+<div id="product_accepteds">
+  <% @product_accepteds.each do |product_accepted| %>
+    <%= render product_accepted %>
+    <p>
+      <%= link_to "Show this product accepted", product_accepted %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New product accepted", new_product_accepted_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :product_accepteds
   resources :sellers
   resources :donors
 
