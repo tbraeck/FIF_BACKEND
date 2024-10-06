@@ -1,5 +1,5 @@
 class Seller < ApplicationRecord
-    has_many :products_accepted, dependent: :destroy
+    has_many :accepted_products, dependent: :destroy
     # has_many :services
     # has_many :frees
     # has_many :communities

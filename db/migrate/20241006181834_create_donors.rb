@@ -7,7 +7,7 @@ class CreateDonors < ActiveRecord::Migration[7.2]
       t.text :email
       t.integer :phone_number
       t.integer :zip_code
-      t.string :product_name
+      t.string :product_type
       t.string :brand
       t.string :how_broken
 

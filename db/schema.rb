@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_06_222509) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_06_224227) do
+  create_table "accepted_products", force: :cascade do |t|
+    t.integer "seller_id", null: false
+    t.string "product_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seller_id"], name: "index_accepted_products_on_seller_id"
+  end
+
   create_table "donors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -18,14 +26,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_06_222509) do
     t.text "email"
     t.integer "phone_number"
     t.integer "zip_code"
-    t.string "product_name"
+    t.string "product_type"
     t.string "brand"
     t.string "how_broken"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "product_accepteds", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,9 +39,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_06_222509) do
     t.text "email"
     t.integer "phone_number"
     t.integer "zip_code"
-    t.string "products_accepted"
+    t.string "accepted_products"
     t.string "type_of_repair"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "accepted_products", "sellers"
 end

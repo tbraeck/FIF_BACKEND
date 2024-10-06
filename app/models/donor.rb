@@ -1,3 +1,3 @@
 class Donor < ApplicationRecord
-    has_many: products_accepted, dependent: :destroy
+    # has_many: accepted_products, dependent: :destroy
 end
