@@ -1,0 +1,102 @@
+<%= form_with(model: donor) do |form| %>
+  <% if donor.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(donor.errors.count, "error") %> prohibited this donor from being saved:</h2>
+
+      <ul>
+        <% donor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :first_name, style: "display: block" %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_area :email %>
+  </div>
+
+  <div>
+    <%= form.label :phone_number, style: "display: block" %>
+    <%= form.number_field :phone_number %>
+  </div>
+
+  <div>
+    <%= form.label :zip_code, style: "display: block" %>
+    <%= form.number_field :zip_code %>
+  </div>
+
+  <div>
+    <%= form.label :product_name, style: "display: block" %>
+    <%= form.text_field :product_name %>
+  </div>
+
+  <div>
+    <%= form.label :brand, style: "display: block" %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div>
+    <%= form.label :how_broken, style: "display: block" %>
+    <%= form.text_field :how_broken %>
+  </div>
+
+  <div>
+    <%= form.label :Seller, style: "display: block" %>
+    <%= form.text_field :Seller %>
+  </div>
+
+  <div>
+    <%= form.label :company_name, style: "display: block" %>
+    <%= form.text_field :company_name %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_area :email %>
+  </div>
+
+  <div>
+    <%= form.label :phone_number, style: "display: block" %>
+    <%= form.number_field :phone_number %>
+  </div>
+
+  <div>
+    <%= form.label :zip_code, style: "display: block" %>
+    <%= form.number_field :zip_code %>
+  </div>
+
+  <div>
+    <%= form.label :products_accepted, style: "display: block" %>
+    <%= form.text_field :products_accepted %>
+  </div>
+
+  <div>
+    <%= form.label :type_of_repair, style: "display: block" %>
+    <%= form.text_field :type_of_repair %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
