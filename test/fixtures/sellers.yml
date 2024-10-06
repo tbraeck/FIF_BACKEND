@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  address: MyString
+  email: MyText
+  phone_number: 1
+  zip_code: 1
+  products_accepted: MyString
+  type_of_repair: MyString
+
+two:
+  company_name: MyString
+  address: MyString
+  email: MyText
+  phone_number: 1
+  zip_code: 1
+  products_accepted: MyString
+  type_of_repair: MyString
