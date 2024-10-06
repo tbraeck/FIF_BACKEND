@@ -39,7 +39,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_06_224227) do
     t.text "email"
     t.integer "phone_number"
     t.integer "zip_code"
-    t.string "accepted_products"
+    t.string "accepted_product"
     t.string "type_of_repair"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
