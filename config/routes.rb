@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   
     get '*path', to: 'fallback#index', constraints: ->(req) { !req.xhr? && req.format.html? }
    
+    get '/manifest.json', to: 'application#manifest', defaults: { format: :json }
+
 
   # Defines the root path route ("/")
   # root "posts#index"

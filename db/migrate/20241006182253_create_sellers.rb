@@ -5,7 +5,6 @@ class CreateSellers < ActiveRecord::Migration[7.2]
       t.string :address
       t.text :email
       t.integer :phone_number
-      t.integer :zip_code
       t.string :accepted_product
       t.string :type_of_repair
 
