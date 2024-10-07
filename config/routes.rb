@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   resources :sellers
   resources :donors
 
-
-  
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
     post "/signup", to: "users#create"
     get "/me", to: "users#show"
@@ -16,8 +14,4 @@ Rails.application.routes.draw do
     get '*path', to: 'fallback#index', constraints: ->(req) { !req.xhr? && req.format.html? }
    
     get '/manifest.json', to: 'application#manifest', defaults: { format: :json }
-
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end
