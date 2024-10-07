@@ -1,3 +1,4 @@
 class Donor < ApplicationRecord
-    has_many: products, dependent: :destroy
-end
+    has_many :products, dependent: :destroy
+  end
+  
