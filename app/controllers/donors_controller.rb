@@ -3,7 +3,8 @@ class DonorsController < ApplicationController
 
   # GET /donors or /donors.json
   def index
-    @donors = Donor.all
+    donors = Donor.all
+    render json: donors
   end
 
   # GET /donors/1 or /donors/1.json

@@ -3,7 +3,7 @@ require 'faker'
 # Create Sellers
 puts "🥷👩‍🦰 Seeding sellers..."
 
-(1..20).each do |i|
+(1..40).each do |i|
   # Create a seller
   seller = Seller.create(
     company_name: Faker::Company.name,
@@ -26,7 +26,7 @@ end
 # Create Donors
 puts "🥷👩‍🦰 Seeding donors..."
 
-(1..20).each do |i|
+(1..40).each do |i|
  donor = Donor.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
