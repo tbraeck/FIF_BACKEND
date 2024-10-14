@@ -9,6 +9,7 @@ class DonorsController < ApplicationController
 
   # GET /donors/1 or /donors/1.json
   def show
+    render json: @donor
   end
 
   # GET /donors/new

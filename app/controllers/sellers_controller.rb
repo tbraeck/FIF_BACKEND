@@ -11,8 +11,11 @@ class SellersController < ApplicationController
   end
 
   # GET /sellers/1 or /sellers/1.json
-  def show
-  end
+ 
+    def show
+      render json: @seller
+    end
+  
 
   # GET /sellers/new
   def new
