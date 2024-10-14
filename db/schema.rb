@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_06_230942) do
   create_table "sellers", force: :cascade do |t|
     t.string "company_name"
     t.string "address"
+    t.string "zip_code"
     t.text "email"
     t.integer "phone_number"
     t.string "accepted_product"

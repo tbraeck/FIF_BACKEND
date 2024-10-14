@@ -2,8 +2,12 @@ class SellersController < ApplicationController
   before_action :set_seller, only: %i[ show edit update destroy ]
 
   # GET /sellers or /sellers.json
+  # def index
+  #   @sellers = Seller.all
+  # end
   def index
-    @sellers = Seller.all
+    sellers = Seller.all
+    render json: sellers
   end
 
   # GET /sellers/1 or /sellers/1.json
