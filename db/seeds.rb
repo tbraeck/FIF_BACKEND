@@ -8,7 +8,8 @@ puts "🥷👩‍🦰 Seeding sellers..."
   seller = Seller.create(
     company_name: Faker::Company.name,
     email: Faker::Internet.email,
-    address: Faker::Address.full_address,
+    address: Faker::Address.street_address,
+    zip_code:Faker::Address.zip_code,
     phone_number: Faker::PhoneNumber.phone_number, #=> "(504) 113-1705"
     type_of_repair: Faker::Verb.simple_present
   )
