@@ -9,7 +9,7 @@ puts "🥷👩‍🦰 Seeding sellers..."
     company_name: Faker::Company.name,
     email: Faker::Internet.email,
     address: Faker::Address.full_address,
-    phone_number: Faker::PhoneNumber.cell_phone_with_country_code,
+    phone_number: Faker::PhoneNumber.phone_number, #=> "(504) 113-1705"
     type_of_repair: Faker::Verb.simple_present
   )
 
@@ -31,7 +31,7 @@ puts "🥷👩‍🦰 Seeding donors..."
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     address: Faker::Address.full_address,
-    phone_number: Faker::PhoneNumber.cell_phone_with_country_code,
+    phone_number: Faker::PhoneNumber.phone_number, #=> "(504) 113-1705"
     product_type: Faker::Appliance.equipment,
     brand: Faker::Company.name,
     how_broken: Faker::Verb.simple_present
